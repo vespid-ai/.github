@@ -1,84 +1,94 @@
 <div align="center">
   <h1>vespid-ai</h1>
-  <p><strong>Agent infrastructure for real-world execution.</strong></p>
+  <p><strong>Infrastructure for trustworthy agent execution.</strong></p>
   <p>
-    We build the runtime, authorization, and portability layers that make AI agents
-    usable beyond demos: brokered execution, protected actions, scoped delegation,
-    and durable operator context.
+    We build open-source runtime, authorization, and portability layers for AI agents that need
+    real boundaries: scoped access, brokered execution, protected actions, and durable operator context.
   </p>
   <p>
     <a href="https://vespid.ai">Website</a>
     ·
-    <a href="https://github.com/vespid-ai/vespid">Core runtime</a>
+    <a href="https://github.com/vespid-ai/vespid">Runtime</a>
     ·
-    <a href="https://github.com/vespid-ai/skillauth">SkillAuth</a>
+    <a href="https://github.com/vespid-ai/skillauth">Authorization</a>
     ·
-    <a href="https://github.com/vespid-ai/hermes-profile-sync">Hermes Profile Sync</a>
+    <a href="https://github.com/vespid-ai/hermes-profile-sync">Portability</a>
   </p>
 </div>
 
-## What we build
+## Thesis
 
-Most agent products still collapse trust, execution, and memory into a single black box.
-vespid-ai takes a different approach: break the agent stack into explicit system layers
-that can be audited, reused, and safely composed.
+Most agent systems still fuse execution, identity, and memory into one opaque product surface.
+That makes them easy to demo and hard to trust.
 
-- Runtime substrate for sandboxed and brokered agent execution
-- Authorization patterns for login-gated and high-trust actions
-- Durable profile and memory portability across machines and environments
-- Product shells and reference implementations that prove the model in practice
+vespid-ai breaks the stack into explicit layers that can be inspected, reused, and composed:
 
-## Featured repositories
+- execution runtimes with real control boundaries
+- delegated authorization instead of raw credential sharing
+- portable agent context across machines and operator environments
+- reference products that prove the model in practice
 
-| Project | What it is | Why it matters |
+## Open-source stack
+
+| Layer | Repository | Purpose |
 | --- | --- | --- |
-| [`vespid`](https://github.com/vespid-ai/vespid) | Managed-agent runtime substrate for brokered sessions, sandboxes, and protected actions | The systems layer: execution control, state boundaries, and reusable runtime primitives |
-| [`skillauth`](https://github.com/vespid-ai/skillauth) | Reference CLI and delegation toolkit for safe agent-driven platform access | Shows how users can authorize agents without sharing raw credentials or cookies |
-| [`hermes-profile-sync`](https://github.com/vespid-ai/hermes-profile-sync) | Toolkit for exporting, sanitizing, syncing, and restoring Hermes profiles | Makes agent memory, skills, and config portable without blindly copying secret state |
-| [`vespid.ai`](https://github.com/vespid-ai/vespid-ai) | Public site and documentation shell | The narrative layer for projects, docs, and field notes |
+| Runtime substrate | [`vespid`](https://github.com/vespid-ai/vespid) | Brokered sessions, sandboxes, protected actions, and reusable execution primitives |
+| Delegated authorization | [`skillauth`](https://github.com/vespid-ai/skillauth) | Safe agent access to login-gated platforms without handing over passwords or cookies |
+| Profile portability | [`hermes-profile-sync`](https://github.com/vespid-ai/hermes-profile-sync) | Export, sanitize, sync, and restore operator profiles without copying unsafe machine state |
+| Public docs and narrative layer | [`vespid-ai`](https://github.com/vespid-ai/vespid-ai) | Project documentation, field notes, and the public-facing systems story |
 
-## Design principles
+## Flagship repositories
 
-### 1. Authorization before automation
-Agents should not inherit full human authority by default. Access should be scoped,
-revocable, auditable, and tied to explicit intent.
+### [`vespid`](https://github.com/vespid-ai/vespid)
+Managed-agent runtime substrate for brokered sessions, sandboxes, and protected actions.
+This is the systems layer underneath the rest of the stack: execution control, state boundaries,
+and reusable runtime primitives for agent-native software.
 
-### 2. Runtime boundaries matter
-Useful agents need isolation, brokered control, and system-level contracts — not just
-prompt engineering and browser macros.
+### [`skillauth`](https://github.com/vespid-ai/skillauth)
+Reference CLI and delegation toolkit for safe agent-driven platform access.
+It demonstrates the authorization model directly: user authorization -> agent execution -> platform control.
 
-### 3. Context should be portable
-A serious agent setup is more than a chat log. Configuration, memory, and reusable skills
-must move across machines cleanly and safely.
+### [`hermes-profile-sync`](https://github.com/vespid-ai/hermes-profile-sync)
+Portable profile export, sanitization, sync, and restore for Hermes Agent setups.
+It treats memories, config, sessions, logs, and secrets as different classes of state instead of one unsafe blob.
 
-### 4. Open systems beat hidden glue
-We prefer explicit primitives, reference implementations, and inspectable tradeoffs over
-magic abstractions that break under real operational load.
+## Principles
+
+### Authorization before automation
+Agents should operate with scoped, revocable capability — not borrowed human identity.
+
+### Runtime boundaries are product features
+Isolation, brokered control, and protected execution matter as much as model quality.
+
+### Durable context should be portable
+A serious agent setup includes memory, config, and reusable skills, not just chat history.
+
+### Open systems over hidden glue
+We prefer inspectable primitives, reference implementations, and explicit tradeoffs over fragile magic.
 
 ## Current focus
 
-Right now the open-source surface is converging on a clear stack:
+The public repository set is converging on a coherent agent stack:
 
-- `vespid` for execution and protected runtime control
-- `skillauth` for delegated authorization and platform-safe access
-- `hermes-profile-sync` for profile portability and operator continuity
+- `vespid` for runtime control
+- `skillauth` for delegated authorization
+- `hermes-profile-sync` for operator continuity and profile portability
 
-This is the foundation for agent-native software that can actually operate in production
-settings with human trust, system boundaries, and repeatable workflows.
+Together they form a foundation for agent software that can survive production constraints:
+human trust, system boundaries, reversibility, and operational realism.
 
 ## For builders
 
-If you're working on agent runtimes, operator tooling, delegated access, or durable memory,
-these repos are meant to be useful as building blocks, not just demos.
+If you are building agent runtimes, operator tooling, controlled delegation, or memory portability,
+these repositories are designed to be useful building blocks, not just concept demos.
 
 Start here:
 
-- Read the project docs on [vespid.ai](https://vespid.ai)
+- Browse the docs at [vespid.ai](https://vespid.ai)
 - Inspect the runtime direction in [`vespid`](https://github.com/vespid-ai/vespid)
 - Study delegated authorization in [`skillauth`](https://github.com/vespid-ai/skillauth)
-- Use [`hermes-profile-sync`](https://github.com/vespid-ai/hermes-profile-sync) for portable agent setups
+- Use [`hermes-profile-sync`](https://github.com/vespid-ai/hermes-profile-sync) to make local agent setups portable
 
 ## Status
 
-Early, opinionated, and shipping. We optimize for clear architecture, operational realism,
-and reusable open-source building blocks for the agent era.
+Early, opinionated, and actively shaping the infrastructure layer for trustworthy agent systems.
