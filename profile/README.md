@@ -14,6 +14,8 @@
     <a href="https://github.com/vespid-ai/skillauth">Authorization</a>
     ·
     <a href="https://github.com/vespid-ai/hermes-profile-sync">Portability</a>
+    ·
+    <a href="https://github.com/vespid-ai/geo-skill">Discovery</a>
   </p>
   <p>
     <a href="https://github.com/vespid-ai/.github/blob/main/profile/README.md">English</a>
@@ -48,6 +50,7 @@ vespid-ai breaks the stack into explicit layers that can be inspected, reused, a
 - delegated authorization instead of raw credential sharing
 - portable agent context across machines and operator environments
 - reference products that prove the model in practice
+- public discovery tooling for AI-native search, GEO, and machine-readable distribution
 
 ## Open-source stack
 
@@ -56,6 +59,7 @@ vespid-ai breaks the stack into explicit layers that can be inspected, reused, a
 | Runtime substrate | [`vespid`](https://github.com/vespid-ai/vespid) | Brokered sessions, sandboxes, protected actions, and reusable execution primitives |
 | Delegated authorization | [`skillauth`](https://github.com/vespid-ai/skillauth) | Safe agent access to login-gated platforms without handing over passwords or cookies |
 | Profile portability | [`hermes-profile-sync`](https://github.com/vespid-ai/hermes-profile-sync) | Export, sanitize, sync, and restore operator profiles without copying unsafe machine state |
+| Discovery and distribution | [`geo-skill`](https://github.com/vespid-ai/geo-skill) | Generative Engine Optimization skill pack and CLI for AI search, llms.txt, and machine-readable public discovery |
 | Public docs and narrative layer | [`vespid-ai`](https://github.com/vespid-ai/vespid-ai) | Project documentation, field notes, and the public-facing systems story |
 
 ## Flagship repositories
@@ -72,6 +76,10 @@ It demonstrates the authorization model directly: user authorization -> agent ex
 ### [`hermes-profile-sync`](https://github.com/vespid-ai/hermes-profile-sync)
 Portable profile export, sanitization, sync, and restore for Hermes Agent setups.
 It treats memories, config, sessions, logs, and secrets as different classes of state instead of one unsafe blob.
+
+### [`geo-skill`](https://github.com/vespid-ai/geo-skill)
+Generative Engine Optimization skill pack and Python CLI for AI search, ChatGPT Search, llms.txt, structured data, and machine-readable project discovery.
+It is the public discovery/distribution layer that makes the stack easier to find, read, and evaluate across AI-native search surfaces.
 
 ## Principles
 
@@ -94,9 +102,10 @@ The public repository set is converging on a coherent agent stack:
 - `vespid` for runtime control
 - `skillauth` for delegated authorization
 - `hermes-profile-sync` for operator continuity and profile portability
+- `geo-skill` for AI-search discovery, GEO workflows, and machine-readable distribution
 
 Together they form a foundation for agent software that can survive production constraints:
-human trust, system boundaries, reversibility, and operational realism.
+human trust, system boundaries, reversibility, operational realism, and public discoverability.
 
 ## For builders
 
@@ -109,6 +118,7 @@ Start here:
 - Inspect the runtime direction in [`vespid`](https://github.com/vespid-ai/vespid)
 - Study delegated authorization in [`skillauth`](https://github.com/vespid-ai/skillauth)
 - Use [`hermes-profile-sync`](https://github.com/vespid-ai/hermes-profile-sync) to make local agent setups portable
+- Use [`geo-skill`](https://github.com/vespid-ai/geo-skill) to improve GitHub/site discoverability, llms.txt coverage, and AI-search legibility
 
 ## Status
 

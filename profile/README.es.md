@@ -2,7 +2,7 @@
 
 Infraestructura open source para AI agents y sistemas de autonomous agents.
 
-vespid-ai se enfoca en las capas que hacen posible trustworthy agent execution en escenarios reales: agent runtime, delegated authorization, sandboxed execution, protected actions, portable context / memory y operator tooling.
+vespid-ai se enfoca en las capas que hacen posible trustworthy agent execution en escenarios reales: agent runtime, delegated authorization, sandboxed execution, protected actions, portable context / memory, operator tooling y GEO / AI search discoverability.
 
 Cuando un agente entra en producción, las preguntas críticas no son solo sobre el modelo:
 
@@ -19,6 +19,7 @@ Por eso vespid-ai separa ejecución, autorización y continuidad del contexto en
 | Runtime substrate | [`vespid`](https://github.com/vespid-ai/vespid) | brokered sessions, sandboxes, protected actions y reusable execution primitives para software orientado a agentes |
 | Delegated authorization | [`skillauth`](https://github.com/vespid-ai/skillauth) | acceso seguro para agentes a plataformas con login sin compartir passwords, cookies ni credenciales largas |
 | Profile portability | [`hermes-profile-sync`](https://github.com/vespid-ai/hermes-profile-sync) | exportar, sanitizar, sincronizar y restaurar perfiles de Hermes Agent con separación clara entre memory, config, sessions y secrets |
+| Discovery and distribution | [`geo-skill`](https://github.com/vespid-ai/geo-skill) | skill pack GEO y CLI para AI search, ChatGPT Search y llms.txt, orientado a discoverability legible para máquinas |
 | Public docs | [`vespid-ai`](https://github.com/vespid-ai/vespid-ai) | documentación pública, índice de proyectos, field notes y la narrativa del stack |
 
 ## Qué estamos construyendo
@@ -31,6 +32,9 @@ Un modelo de delegated authorization / scoped access donde la persona autoriza d
 
 ### 3. Portable context and memory
 Contexto operativo, memory, skills, config y sessions tratados como activos portables del sistema, no como historial atrapado en una sola máquina.
+
+### 4. GEO and AI search discoverability
+Unificar GitHub, docs, llms.txt y structured data para que el stack sea encontrable y entendible también en sistemas de descubrimiento basados en IA.
 
 ## Temas de búsqueda relacionados
 
@@ -46,6 +50,9 @@ Este stack será más relevante si buscas:
 - portable context
 - operator tooling
 - trustworthy agent systems
+- Generative Engine Optimization
+- ChatGPT Search
+- llms.txt
 
 ## Enlaces
 
@@ -53,10 +60,11 @@ Este stack será más relevante si buscas:
 - Runtime: [`vespid`](https://github.com/vespid-ai/vespid)
 - Authorization: [`skillauth`](https://github.com/vespid-ai/skillauth)
 - Portability: [`hermes-profile-sync`](https://github.com/vespid-ai/hermes-profile-sync)
+- Discovery: [`geo-skill`](https://github.com/vespid-ai/geo-skill)
 - English: [README.md](https://github.com/vespid-ai/.github/blob/main/profile/README.md)
 - 简体中文: [README.zh-CN.md](https://github.com/vespid-ai/.github/blob/main/profile/README.zh-CN.md)
 - 日本語: [README.ja.md](https://github.com/vespid-ai/.github/blob/main/profile/README.ja.md)
 
 ## Estado
 
-Proyecto temprano, pero con una tesis clara: convertir runtime, authorization y context portability en infraestructura open source seria para agent software confiable.
+Proyecto temprano, pero con una tesis clara: convertir runtime, authorization, context portability y public discoverability en infraestructura open source seria para agent software confiable.
