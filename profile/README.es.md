@@ -1,70 +1,22 @@
 # vespid-ai
 
-Infraestructura open source para AI agents y sistemas de autonomous agents.
+El foco público de vespid-ai ahora está concentrado en [`geo-skill`](https://github.com/vespid-ai/geo-skill).
 
-vespid-ai se enfoca en las capas que hacen posible trustworthy agent execution en escenarios reales: agent runtime, delegated authorization, sandboxed execution, protected actions, portable context / memory, operator tooling y GEO / AI search discoverability.
+Es un toolkit open source para Generative Engine Optimization (GEO): skills reutilizables y un CLI en Python para hacer que sitios, documentación y repositorios OSS sean más legibles para la búsqueda con IA, más fáciles de citar y más fáciles de descubrir.
 
-Cuando un agente entra en producción, las preguntas críticas no son solo sobre el modelo:
+## Qué hace geo-skill
 
-- quién autoriza la acción
-- dentro de qué límites corre el agente
-- cómo se conserva, audita, transporta y restaura el contexto operativo
+- audita cómo un sitio, una base documental o un repositorio aparecen ante sistemas de búsqueda con IA
+- genera y mejora `llms.txt`, datos estructurados y otras superficies legibles por máquina
+- convierte GEO en un flujo operativo reutilizable en vez de una lista vaga de consejos
+- mejora la precisión con la que sistemas como ChatGPT Search extraen, citan y distribuyen información pública
 
-Por eso vespid-ai separa ejecución, autorización y continuidad del contexto en capas explícitas, reutilizables y auditables, en lugar de esconder todo dentro de una sola superficie opaca.
+## Puntos de entrada públicos
 
-## Repositorios principales
+- Repositorio: [`vespid-ai/geo-skill`](https://github.com/vespid-ai/geo-skill)
+- Sitio web: [vespid.ai](https://vespid.ai)
+- Releases: [geo-skill releases](https://github.com/vespid-ai/geo-skill/releases)
 
-| Capa | Repositorio | Propósito |
-| --- | --- | --- |
-| Runtime substrate | [`vespid`](https://github.com/vespid-ai/vespid) | brokered sessions, sandboxes, protected actions y reusable execution primitives para software orientado a agentes |
-| Delegated authorization | [`skillauth`](https://github.com/vespid-ai/skillauth) | acceso seguro para agentes a plataformas con login sin compartir passwords, cookies ni credenciales largas |
-| Profile portability | [`hermes-profile-sync`](https://github.com/vespid-ai/hermes-profile-sync) | exportar, sanitizar, sincronizar y restaurar perfiles de Hermes Agent con separación clara entre memory, config, sessions y secrets |
-| Discovery and distribution | [`geo-skill`](https://github.com/vespid-ai/geo-skill) | skill pack GEO y CLI para AI search, ChatGPT Search y llms.txt, orientado a discoverability legible para máquinas |
-| Public docs | [`vespid-ai`](https://github.com/vespid-ai/vespid-ai) | documentación pública, índice de proyectos, field notes y la narrativa del stack |
+## Tesis
 
-## Qué estamos construyendo
-
-### 1. Agent runtime
-Un entorno de ejecución controlado para AI agents / autonomous agents, con límites reales entre ejecución, estado y permisos.
-
-### 2. Agent authorization
-Un modelo de delegated authorization / scoped access donde la persona autoriza desde un dispositivo confiable y el agente recibe capacidades limitadas, auditables y revocables.
-
-### 3. Portable context and memory
-Contexto operativo, memory, skills, config y sessions tratados como activos portables del sistema, no como historial atrapado en una sola máquina.
-
-### 4. GEO and AI search discoverability
-Unificar GitHub, docs, llms.txt y structured data para que el stack sea encontrable y entendible también en sistemas de descubrimiento basados en IA.
-
-## Temas de búsqueda relacionados
-
-Este stack será más relevante si buscas:
-
-- AI agent infrastructure
-- autonomous agent runtime
-- agent authorization
-- delegated authorization
-- sandboxed execution
-- protected actions
-- portable memory
-- portable context
-- operator tooling
-- trustworthy agent systems
-- Generative Engine Optimization
-- ChatGPT Search
-- llms.txt
-
-## Enlaces
-
-- Website: [vespid.ai](https://vespid.ai)
-- Runtime: [`vespid`](https://github.com/vespid-ai/vespid)
-- Authorization: [`skillauth`](https://github.com/vespid-ai/skillauth)
-- Portability: [`hermes-profile-sync`](https://github.com/vespid-ai/hermes-profile-sync)
-- Discovery: [`geo-skill`](https://github.com/vespid-ai/geo-skill)
-- English: [README.md](https://github.com/vespid-ai/.github/blob/main/profile/README.md)
-- 简体中文: [README.zh-CN.md](https://github.com/vespid-ai/.github/blob/main/profile/README.zh-CN.md)
-- 日本語: [README.ja.md](https://github.com/vespid-ai/.github/blob/main/profile/README.ja.md)
-
-## Estado
-
-Proyecto temprano, pero con una tesis clara: convertir runtime, authorization, context portability y public discoverability en infraestructura open source seria para agent software confiable.
+GEO no es folklore para manipular modelos. Es estructura clara, artefactos públicos precisos, metadatos útiles, rutas de recuperación estables y documentación que los sistemas de IA pueden leer sin adivinar.

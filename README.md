@@ -1,12 +1,9 @@
 # vespid-ai organization profile
 
-This repository powers the public GitHub organization homepage for `vespid-ai`.
+Public organization profile and default community files for vespid-ai.
 
-GitHub renders `profile/README.md` on the org overview page.
+The public-facing org narrative is intentionally centered on `geo-skill` and Generative Engine Optimization (GEO):
 
-Available profile variants:
-
-- English: [`profile/README.md`](./profile/README.md)
-- 简体中文: [`profile/README.zh-CN.md`](./profile/README.zh-CN.md)
-- 日本語: [`profile/README.ja.md`](./profile/README.ja.md)
-- Español: [`profile/README.es.md`](./profile/README.es.md)
+- repository: https://github.com/vespid-ai/geo-skill
+- website: https://vespid.ai
+- releases: https://github.com/vespid-ai/geo-skill/releases
